@@ -42,18 +42,16 @@ int main(int argc, char **argv)
   int ithOrder = atoi(argv[1]);
   int numElements = argc - 2; 
 
-  if( i < 1 || i > n) {
-    printf("The ith order value must be between 1 and %d\n", n);
+  if( ithOrder < 1 || ithOrder > numElements) {
+    printf("The ith order value must be between 1 and %d\n", numElements);
     exit(-1);
   }
 
-  int *numbers = strToIntArray(&argv[2], n);
+  int *numbers = strToIntArray(&argv[2], numElements);
 
-  //TODO: call the appropriate function with the appropriate arguments 
-  //      to find the i-th order statistic
-  int ithElement = ;
+  int ithElement = getOrderStatistic(numbers, numElements, ithOrder);
 
-  printf("The %dth element is: %d\n", i, ithElement);
+  printf("The %dth element is: %d\n", ithOrder, ithElement);
 
   return 0;
 }
