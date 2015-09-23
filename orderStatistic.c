@@ -58,7 +58,8 @@ int main(int argc, char **argv)
 
 void insertionSort(int *array, int size) {
   int value;
-  for(int i=1; i<size; i++) {
+  int i;
+  for(i=1; i<size; i++) {
     value = array[i];
     int j = i;
     while(j > 0 && array[j-1] > value) {
