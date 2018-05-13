@@ -1,18 +1,15 @@
 /**
- *
- * ithOrder.c
  * This program finds the ith order statistic of
- * a list of numbers passed on the command line.
+ * a list of numbers provided via the command line.
  *
  * It uses insertion sort (a sorting algorithm) to
  * sort the list then finds i-th order elements in the
  * array.
  *
  */
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
 
 /**
  * This function takes an array of strings and converts
@@ -27,7 +24,7 @@ int * strToIntArray(char **strings, int numStrings);
 void insertionSort(int *arr, int n);
 
 /**
- * This function returns the i-th (i) order statistic of 
+ * This function returns the i-th (i) order statistic of
  * the given integer array (arr) which has n elements
  */
 int getOrderStatistic(int *arr, int n, int i);
@@ -40,11 +37,11 @@ int main(int argc, char **argv)
   }
 
   int ithOrder = atoi(argv[1]);
-  int numElements = argc - 2; 
+  int numElements = argc - 2;
 
   if( ithOrder < 1 || ithOrder > numElements) {
     printf("The ith order value must be between 1 and %d\n", numElements);
-    exit(-1);
+    exit(1);
   }
 
   int *numbers = strToIntArray(&argv[2], numElements);
@@ -80,6 +77,6 @@ int * strToIntArray(char **strings, int numStrings) {
 }
 
 int getOrderStatistic(int *arr, int n, int i) {
-  insertionSort(arr, n); 
+  insertionSort(arr, n);
   return arr[i-1];
 }

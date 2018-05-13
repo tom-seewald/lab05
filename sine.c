@@ -5,7 +5,8 @@
 //function prototypes + documentation (comments)
 
 /**
- * This function computes the factorial, n!
+ * This function computes the factorial,
+ * n! = n * (n-1) * (n-2) ... 3 * 2 * 1
  */
 long factorial(int n);
 
