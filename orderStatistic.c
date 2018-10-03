@@ -29,8 +29,8 @@ void insertionSort(int *arr, int n);
  */
 int getOrderStatistic(int *arr, int n, int i);
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
+
   if (argc < 3) {
     printf("Usage: %s <ith order value> <list of unique numbers>\n", argv[0]);
     exit(1);
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
   int ithOrder = atoi(argv[1]);
   int numElements = argc - 2;
 
-  if( ithOrder < 1 || ithOrder > numElements) {
+  if(ithOrder < 1 || ithOrder > numElements) {
     printf("The ith order value must be between 1 and %d\n", numElements);
     exit(1);
   }

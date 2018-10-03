@@ -90,21 +90,30 @@ questions.
   \part Identify all of the user-defined functions in the program along with the functions' return types and the number of parameters they accept.
   \begin{solution}[2cm]
   ~
-  \end{solution}  \part Among the functions \mintinline{c}{main}, \mintinline{c}{strToIntArray}, \mintinline{c}{insertionSort}, and \mintinline{c}{getOrderStatistic}: identify which function calls which other function(s).  \begin{solution}[2cm]
+  \end{solution}
+  \part Among the functions \mintinline{c}{main}, \mintinline{c}{strToIntArray}, \mintinline{c}{insertionSort}, and \mintinline{c}{getOrderStatistic}: identify which function calls which other function(s).
+  \begin{solution}[2cm]
   ~
-  \end{solution}  \part To compute the minimum element you would ask for the first element ($i = 1$).  What arguments would you need to provide to generate the second smallest element?  The maximum element?  The median element?  \begin{solution}[2cm]
-  ~
-  \end{solution}\end{parts}\question Assume you had written the force function like 
-
+  \end{solution}
+  
+  \part How might you implement the following function?  Hint: it should only be a one-liner.
 \begin{minted}{c}
-getForce(double distance, double time, double initialDistance, double mass) { 
-  return mass * getAcceleration(distance, initialDistance, time);
+int getMin(int *arr, n) {
+
+
 }
 \end{minted}
 
-Compare the two different methods of writing this function.  In your consensus opinion, which one is better for reusability?  Readability?  Why?.
+  \part In the \mintinline{text}{orderStatistic.c} file the prototypes and
+  documentation were placed before the main and all the definitions after instead
+  of in their own separate files.  Identify 1 or 2 disadvantages to this approach.
   \begin{solution}[2cm]
-  \end{solution}
+  ~
+  \end{solution}
+    
+\end{parts}
+
+\question Demonstrate your final color utility program and testing file to a lab instructor, have them sign this worksheet and turn it in.
 
 \end{questions}
   
