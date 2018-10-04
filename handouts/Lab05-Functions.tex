@@ -247,7 +247,9 @@ $$\begin{array}{ll}
   g' &= 0.349r + 0.686g + 0.168b \\
   b' &= 0.272r + 0.534g + 0.131b
 \end{array}$$
-As with the gray-scale techniques, values should be rounded.
+As with the gray-scale techniques, values should be rounded.  Moreover, if
+any of the values exceeds 255, they should be reset to 255 to stay within
+the valid RGB color range.
 
 \subsubsection*{Instructions}
 
