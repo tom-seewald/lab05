@@ -253,17 +253,11 @@ the valid RGB color range.
 
 \subsubsection*{Instructions}
 
-Design and write the following functions.  Place your documentation 
-and prototypes into \mintinline{text}{colorUtils.h} and place your 
-function definitions into \mintinline{text}{colorUtils.c}.  You can
-compile (without linking, since your code will have no \mintinline{c}{main()}
-function) you can use 
-
-\mintinline{text}{gcc -c colorUtils.c}
-
-However, we have provided a \mintinline{text}{makefile} to build the 
-entire project for you.  Once compiled, it produces an executable
-named \mintinline{text}{imageDriver} that you can run to test your
+Design and write the functions below.  Place your documentation and 
+prototypes into \mintinline{text}{colorUtils.h} and place your function 
+definitions into \mintinline{text}{colorUtils.c}.  You can build the 
+entire project using \mintinline{text}{make} which produces an executable 
+named \mintinline{text}{imageDriver} that you can run to test your 
 functions on an image of your choice.
 
 \begin{itemize}
@@ -308,6 +302,15 @@ reported.
 Using this starter code as an example, add more test cases for the 
 other functions.  You should write at least 1 test case for 
 \emph{each} function you wrote.  
+
+To compile (without linking, since your code will have no 
+mintinline{c}{main()} function) you can use 
+
+\mintinline{text}{gcc -c colorUtils.c}
+
+Then to compile the test driver program, use
+
+\mintinline{text}{gcc -o colorUtilsTester colorUtils.c colorUtilsTester.c}
 
 \section{Advanced Activity (Optional)}
 
