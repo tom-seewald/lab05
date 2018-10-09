@@ -6,94 +6,117 @@
 
 int main(int argc, char **argv) {
 
-  int a = 10, b = 20, c = 30;
+  int r, g, b;
+  int x = 10, y = 20, z = 30;
+  int result;
   int numPassed = 0;
   int numFailed = 0;
 
-  printf("TESTING: max(%d,%d,%d): ", a, b, c);
-  if( max(a, b, c) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", x, y, z);
+  result = max(x, y, z);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", a, c, b);
-  if( max(a, c, b) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", x, z, y);
+  result = max(x, z, y);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", b, a, c);
-  if( max(b, a, c) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", y, x, z);
+  result = max(y, x, z);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", b, c, a);
-  if( max(b, c, a) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", y, z, x);
+  result = max(y, z, x);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", c, a, b);
-  if( max(c, a, b) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", z, x, y);
+  result = max(z, x, y);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", c, b, a);
-  if( max(c, b, a) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", z, y, x);
+  result = max(z, y, x);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", a, a, c);
-  if( max(a, a, c) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", x, x, z);
+  result = max(x, x, z);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", a, c, a);
-  if( max(a, c, a) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", x, z, x);
+  result = max(x, z, x)
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", c, a, a);
-  if( max(c, a, a) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", z, x, x);
+  result = max(z, x, x);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  printf("TESTING: max(%d,%d,%d): ", c, c, c);
-  if( max(c, c, c) != 30 ) {
-    printf("FAILED\n");
+  printf("TESTING: max(%d,%d,%d): ", z, z, z);
+  result = max(z, z, z);
+  if(result != 30) {
+    printf("FAILED: max returned %d, expected 30\n", result);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+  r = 255, g = 0, b = 0;
+  printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleAverage(r, g, b);
+  if(result != 85) {
+    printf("FAILED: toGrayScaleAverage returned %d, expected 85\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
