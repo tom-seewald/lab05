@@ -1,4 +1,5 @@
-
+#ifndef IMAGE_UTILS_HEADER
+#define IMAGE_UTILS_HEADER
 /**
  * A structure that represents a single pixel value using
  * the RGB (red-blue-green) color model.  Each integer
@@ -51,3 +52,5 @@ void imageToGrayScaleLuminosity(Pixel **image, int height, int width);
  * Convert's the given image to a sepia tone.
  */
 void imageToSepia(Pixel **image, int height, int width);
+
+#endif
