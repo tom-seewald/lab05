@@ -1,6 +1,5 @@
 #ifndef COLOR_HEADER
 #define COLOR_HEADER
-#include <math.h>
 
 int minInt(int int1, int int2, int int3);
 
